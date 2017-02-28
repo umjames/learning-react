@@ -4,8 +4,18 @@ var HelloWorld = React.createClass({
     }
 });
 
+var GreetingsClock = React.createClass({
+    render: function() {
+        var today = new Date();
+        return <h1>Hey! Have a good { today.getHours() > 4 && today.getHours() < 18 ? 'day' : 'night' }!</h1>;
+    }
+});
+
 ReactDOM.render(
-    <HelloWorld />,
+    <div>
+    <HelloWorld />
+    <GreetingsClock />
+    </div>,
     document.getElementById('root')
 );
 
