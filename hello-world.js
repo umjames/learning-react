@@ -1,18 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-var HelloWorld = React.createClass({
-    render: function() {
+class HelloWorld extends React.Component {
+    render() {
         return <h1>Hello World from Learning ReactJS</h1>;
     }
-});
+}
 
-var GreetingsClock = React.createClass({
-    render: function() {
-        var today = new Date();
+class GreetingsClock extends React.Component {
+    render() {
+        const today = new Date();
         return <h1>Hey! Have a good { today.getHours() > 4 && today.getHours() < 18 ? 'day' : 'night' }!</h1>;
     }
-});
+}
 
 ReactDOM.render(
     <div>
